@@ -1,0 +1,14 @@
+<div class="box-users">
+    <h1 *ngIf="listUsers" class="title">{{ listUsers.length }} Usuarios registrados</h1>
+    <mat-card class="boxs">
+        <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let user of listUsers"> 
+                <span class="username"> {{user.name}}</span> 
+                <span class="username"> {{user.phone}}</span> 
+                | <a class="action-ver" [routerLink]="['/users/view', user.id]">Ver</a>
+                | <a class="action-edit" [routerLink]="['/users/edit', user.id]">Editar</a>
+                | <a class="action-delete" [routerLink]="['/users/delete', user.id]">Eliminar</a>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
+</div>

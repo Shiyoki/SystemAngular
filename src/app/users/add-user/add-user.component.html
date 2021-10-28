@@ -1,0 +1,22 @@
+<mat-card class="card">   
+    <mat-card-title class="title">Registrar</mat-card-title>
+    <form [formGroup]="addUserForm" (submit)="createUser()">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label class="text">Nombre y apellido</mat-label>
+              <input matInput placeholder="Placeholder" formControlName="name">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label class="text">Telefono</mat-label>
+              <input matInput placeholder="Placeholder" formControlName="phone">
+            </mat-form-field>
+          </p>
+          <p>
+            <button class="button" color="primary">Agregar</button>
+
+          </p>
+    </form>
+</mat-card>
+
